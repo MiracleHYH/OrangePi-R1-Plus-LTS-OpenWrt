@@ -22,18 +22,25 @@ Modified OpenWrt for R1-Plus-LTS from official source code (OpenWrt 21.02 Kernel
 - Dr.Com客户端上网认证[dogcom](https://github.com/mchome/openwrt-dogcom)
 ## 编译流程
 ```shell
+# 获取源码
 git clone https://github.com/orangepi-xunlong/openwrt.git -b openwrt-21.02
 cd openwrt/
 git pull
+# 添加插件
 mkdir package/my_addons
+# Dr.com C语言 OpenWrt客户端
 git clone https://github.com/mchome/openwrt-dogcom.git package/my_addons/openwrt-dogcom
 git clone https://github.com/mchome/luci-app-dogcom.git package/my_addons/luci-app-dogcom
+# Argon主题
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/my_addons/luci-theme-argon
+# SSR-Plus
 git clone --depth=1 https://github.com/fw876/helloworld.git package/my_addons/helloworld
 git -C package/my_addons/helloworld pull
+# SSR-Plus 依赖
 for i in "dns2socks" "microsocks" "ipt2socks" "pdnsd-alt" "redsocks2"; do \ 
-svn checkout "https://github.com/immortalwrt/packages/trunk/net/$i" "package/my_addons/helloworld/$i"; \ 
+  svn checkout "https://github.com/immortalwrt/packages/trunk/net/$i" "package/my_addons/helloworld/$i"; \ 
 done
+# 后面就是标准流程了
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 make menuconfig
