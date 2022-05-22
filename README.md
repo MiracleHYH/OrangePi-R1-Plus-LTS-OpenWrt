@@ -1,5 +1,6 @@
 # OrangePi-R1-Plus-LTS-OpenWrt
 Modified OpenWrt for R1-Plus-LTS from official source code (OpenWrt 21.02 Kernel 5.4)
+[固件下载](https://github.com/MiracleHYH/OrangePi-R1-Plus-LTS-OpenWrt/releases/tag/2022.5.22)
 ## 说明
 ### 硬件信息
 - Xunlong Orange Pi R1 Plus LTS
