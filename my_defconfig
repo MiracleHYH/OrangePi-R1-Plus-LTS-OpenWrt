@@ -37,7 +37,7 @@ CONFIG_PACKAGE_luci-app-ntpc=y
 
 # add <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 CONFIG_PACKAGE_luci-theme-argon=y
-CONFIG_PACKAGE_luci-app-openclash=y
+# CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_dogcom=y
 CONFIG_PACKAGE_luci-app-dogcom=y
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
